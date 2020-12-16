@@ -31,32 +31,36 @@
 <section class="part-1">
    <div class="container">
        <div class="row">
-           <div class="col-md-6 pb-5">
-            <div class="wrap-login100 p-t-50 p-b-90">
+           <div class="col-md-12 pb-5">
+            <div class="wrap-login2100 p-t-50 p-b-90">
                 <form class="login100-form validate-form flex-sb flex-w">
                 <span class="login100-form-title p-b-51">
-                Login
+                Add new Booking
                 </span>
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
-                <input class="input100" type="text" name="username" placeholder="Username">
+                <input class="input100" type="date" name="username" placeholder="Event date">
                 <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
-                <input class="input100" type="password" name="pass" placeholder="Password">
-                <span class="focus-input100"></span>
+                    <select id="foo" class="select1"></select>
                 </div>
-                <div class="flex-sb-m w-full p-t-3 p-b-24">
-                <div class="contact100-form-checkbox">
-                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                <label class="label-checkbox100" for="ckb1">
-                Remember me
-                </label>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                    <select id="foo1" class="select2"></select>
                 </div>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                    <select id="foo2" class="select3"></select>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
+                    <input class="input100" type="text" name="event location" placeholder="Event location">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
+                    <input class="input100" type="number" name="number of guests" placeholder="Number of guests">
+                    <span class="focus-input100"></span>
                 </div>
                 <div class="container-login100-form-btn m-t-17">
-                <button class="login100-form-btn">
-                Login
-                </button>
+                <button class="btn btn-success">OK</button>
+                <button class="btn btn-danger">Cancel</button>
                 </div>
                 </form>
                 </div>
@@ -66,5 +70,43 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="index.js"></script>
+<script>
+    (function() {
+    var elm = document.getElementById('foo'),
+        df = document.createDocumentFragment();
+    var categories=["Anchor","Artist Management","Baker","Brass Band","Caterer","Chaat Bhandar","Classical Music","Cooks & Chefs","Couch","Dance Floor","Dandiya Group","Dappu & Dhol","Decorater","Designer","Disposables Cutlery","DJ & Sounds","Drivers & Valet","Event Artist","Event Lights","Event Planner","Fancy Chairs","Fire Craker","Flex & Banners","Florist","Fruit Supply","Fun & Entertainment","Ghode & Ghoda Gadi","Gift Packaging","Gifts","Guest House & Service Apts","Hair Stylist","Hot Chips","Ice Carving","Ice-Cream Shop","Instrumental Artist","Invitation Card","Landscaping","LED Screen & Walls","Lights","Live Band","Live Streaming","Magician","Makeup Artist","Manpower Suppliers","Meat Suppliers","Mehandi Artist","Mineral Water Suppliers","Molvi","Orchestra Group","Paan Shops","Palki","Pandit","Party Cleaners","Party Needs","Photography","Priest","Puja Items","Security Service","Shehnai","Special Effects","Sweet Shops","Tailor","Tatoos Artist","Tent House","Transport Rentals","Travel Planner","Vegitable Suppliers","Venues","Vintage Cars","Wedding Accessories","Wholesale Provisionals","Wines & Liquor Suppliers"]
+    for (var i = 0; i <=categories.length; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.appendChild(document.createTextNode(categories[i]));
+        df.appendChild(option);
+    }
+    elm.appendChild(df);
+}());
+(function() {
+    var elm = document.getElementById('foo1'),
+        df = document.createDocumentFragment();
+        var services=["Dias","Classical","Exclusive Desserts","Return Gift","Social Events","Women's Dress","Professional Artist","Mimicry Artist","Anchor","Nail Art","Emcee","Corporate Events","Brahmin Food","Corporate Gifts","Stil Photography","Horse Ride","Bridal Mehandi","Permanent Tatttoos","Magic Shows","Bhangra","Live Streaming","Temporary Tattoos","Magic Mirror","Dandiya & Koltam","Face Painting","BangleMaker","Pot Maker","Camel Ride","Photo Booth","Cartoon Character","Stilt Walker","Men's Dress","Ballon Twister","Parrot Astrology","House Decoration","Exclusive Vegiterian","Jain Food","Chaat","Dessert /Sweets","General Makeup","Sari Draping","Bridal Makeup","Hair Dresser","Book & Stationary","Gold & Silver Items","Garlands","Flower Jewellery","Loose Flowers","Plants","Exotic Flower","Drapes Decoration","Flower Decoration","Sharpies","Shamiyana","Christian","Premium Style","Wedding Planner","Wedding Attire","Exclusive Puja Elements","Event Decorator","Chairs","Barricade","Wine Shop","Game Jockey","Vegitable Carvings","General Grocery","Transport Vehicles","Cloths & Drapes","Exclusive","Exclusivefruits","Videography","Event Makeup","Drone Camera","Live Streaming","Post-Wedding Shoot","Pre-Wedding","Portfolio","Carpet","Destination Weddings","Homa's","Shanti Pooja","Classic Band","Traditional Attire","Vegetarian Baker","Non-Veg Baker","Vegetarian Food","Non-Veg Food","Pani Puri","Other Chaat","Hindustani Classical","Carnatic Music","Continental","Hyderabadi","Chinese","Italian","Lebanese","Mughlai","Rewards","Vinyl Floor","Navratri Special","Telengana Style","Costume Designer","Punjabi Style","Tribal Style","Plastic Cutlery","Eco- Friendly","Edible Cutlery","Edible Cutlery","Professional Drivers","Professional Anchor","Local Events","Imitation Jewellery","Festival Crackers","Special Orders","Design & Printing","Custom Made","Flower Arrangement","Wholesale Florist","Florist Shop","Caricature","Game Organiser","Hostess","Live Orchestra","Live Band","Classical Music","Instrumental Music","Iced Carving","Vegitable Carving","Ghoda Ghadi","Gift Packing","Event Gifts","Private Stay","Commercial","Event Styling","Party Order","Exclusive Cards","Special Landscaping","LED Screen","Party Lights","Laser Lights","Building Lights","Online Streaming","Magician","Professional Makeup","Event Manpower","Events","Exclusive Mehanadi","Party Supply","Event Orders","Traditional Palki","Traditional Rituals","ProfessionalCleaning","Clown","Wholesale Party Iteam","Traditional Priest","Event Security","Traditional Shehnai","Customised Orders","Professional Tailors","Professional Tents","Goods Carrier","Bus Rental","Professional Travel Planner","Party Veg Supply","Banquet Halls","Open Lawns","Resorts","Special Occasion","Cap & Jutha","Party Booking","Traditional Pagdi","Party Grocery","Wine Shops","Puja Elements","Fesival Gifts","Birthday Gifts","Special Chairs","Wedding Decorator","Ballon Decoration","Ghoda","Air Brush Makeup","Floral Elements","Palki","Candid Photography","Wholesale Meat","Party Orders","Official Gifts"]
+    for (var i = 1; i <= services.length; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.appendChild(document.createTextNode(services[i]));
+        df.appendChild(option);
+    }
+    elm.appendChild(df);
+}());
+(function() {
+    var elm = document.getElementById('foo2'),
+        df = document.createDocumentFragment();
+        var events=["60th Birthday","Anniversary","Baby Shower","Birthday","Bridal Shower","Cradle Ceremony","Death Anniversary","Dhoti Ceremony","Engagement","Felicitations","Get Together","Graduation","Groom Ceremony","Haldi Ceremony","Honeymoon","Housewarming","Mehendi","Reception","Retirment","Sari Ceremony","Sangeet","Sweet 16","Wedding","Launch","Prmotion","Inauguration",]
+    for (var i = 1; i <= events.length; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.appendChild(document.createTextNode(events[i]));
+        df.appendChild(option);
+    }
+    elm.appendChild(df);
+}());
+</script>
 	</body>
 </html>
